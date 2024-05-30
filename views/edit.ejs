@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Redigera inlägg</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+    <h1>Redigera inlägg</h1>
+    <form action="/edit/<%= id %>" method="POST">
+        <label for="title">Titel:</label>
+        <input type="text" name="title" value="<%= post.title %>" required>
+        <br>
+        <label for="content">Innehåll:</label>
+        <textarea name="content" required><%= post.content %></textarea>
+        <br>
+        <button type="submit">Uppdatera</button>
+    </form>
+    <a href="/">Tillbaka till inlägg</a>
+</body>
+</html>

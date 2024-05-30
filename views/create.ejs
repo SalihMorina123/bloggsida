@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Skapa inlägg</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+    <h1>Skapa ett nytt inlägg</h1>
+    <form action="/create" method="POST">
+        <label for="title">Titel:</label>
+        <input type="text" name="title" required>
+        <br>
+        <label for="content">Innehåll:</label>
+        <textarea name="content" required></textarea>
+        <br>
+        <button type="submit">Skicka</button>
+    </form>
+    <a href="/">Tillbaka till inlägg</a>
+</body>
+</html>

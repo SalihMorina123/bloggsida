@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Inlägg</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+    <h1>Alla inlägg</h1>
+    <a href="/create">Skapa nytt inlägg</a>
+    <ul>
+        <% posts.forEach((post, index) => { %>
+            <li>
+                <a href="/post/<%= index %>"><%= post.title %></a>
+                <a href="/edit/<%= index %>">Redigera</a>
+                <form action="/delete/<%= index %>" method="POST" style="display:inline;">
+                    <button type="submit">Ta bort</button>
+                </form>
+            </li>
+        <% }); %>
+    </ul>
+</body>
+</html>
